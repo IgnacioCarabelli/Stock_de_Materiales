@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Obras</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>Simulador de Obras</h1>
+
+    <section id="stock-section">
+        <h2>Stock de Materiales</h2>
+        <div id="stock-container"></div>
+
+        <h3>Agregar Material al Stock</h3>
+    <form id="formAgregarMaterial">
+    <input type="text" id="nombreMaterial" placeholder="Nombre del material" required>
+    <input type="number" id="cantidadMaterial" placeholder="Cantidad" min="1" required>
+    <button type="submit">Agregar</button>
+</form>
+
+<ul id="listaStock"></ul>
+
+    </section>
+
+    <section id="carrito-section">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito-container"></div>
+    </section>
+
+    <section id="obras-section">
+        <h2>Obras</h2>
+        <div id="obras-container"></div>
+        <input type="text" id="nueva-obra" placeholder="Nombre de la nueva obra">
+        <button id="agregar-obra">Agregar Obra</button>
+    </section>
+
+    <section id="asignar-section">
+        <h2>Asignar Material del Carrito a una Obra</h2>
+        <label for="select-material">Material:</label>
+        <select id="select-material"></select>
+        <label for="select-obra">Obra:</label>
+        <select id="select-obra"></select>
+        <label for="cantidad-asignar">Cantidad:</label>
+        <input type="number" id="cantidad-asignar" min="1" value="1">
+        <button id="asignar-material">Asignar</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
